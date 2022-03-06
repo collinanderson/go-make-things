@@ -101,7 +101,7 @@ It's a super lightweight, easy way to do code-splitting without messing with a c
 
 When it comes to web performance, 14kb is a magic number. That's the approximate number of bytes in a single round trip HTTP request.
 
-Servers send files to the browser in small packets rather than all-at-once. If you have a 20kb JavaScript file, that takes two round trips to get to the browser.
+Servers send files to the browser in small chunks rather than all-at-once. If you have a 20kb JavaScript file, that takes two round trips to get to the browser.
 
 The more round trips, the slower the site (generally speaking).
 

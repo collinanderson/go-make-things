@@ -48,7 +48,7 @@ Caching can help a lot with this, but flat HTML files are just so absurdly fast.
 
 Severs respond to HTTP requests in 14kb chunks. 
 
-If you have, for example, a 250kb image, 18 small packets of data will be sent one-at-a-time for it: 17 packets 14kb in size, plus one not-quite-12kb one.
+If you have, for example, a 250kb image, 18 small chunks of data will be sent one-at-a-time for it: 17 chunks 14kb in size, plus one not-quite-12kb one.
 
 Each HTTP request adds a bit of latency to the rendering process, as browsers and servers do a little handshake dance with each other.
 

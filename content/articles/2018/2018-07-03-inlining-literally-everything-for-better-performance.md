@@ -22,7 +22,7 @@ There are a few nuances to how HTTP works that impact web performance.
 
 1. Both CSS and JavaScript are render blocking, so when a browser comes across a file of that type in the HTML, it waits until it's finished before rendering anything else.
 2. Downloading multiple smaller files is slower than downloading a single file of the same combined size, because of the lookups, handshakes, and "queuing process" that happens. This isn't true anymore with HTTP2, but older browsers and unencrypted sites don't support it.
-3. Data for any particular file is transferred in small chunks of about 14kb. So if you have, for example, a 250kb image, 18 small packets of data will be sent one-at-a-time for it.
+3. Data for any particular file is transferred in small chunks of about 14kb. So if you have, for example, a 250kb image, 18 small chunks of data will be sent one-at-a-time for it.
 
 Because of these things, if the combined weight of your above-the-fold (not a real thing) CSS, HTML, and JS is 14kb or less (after minifying and gzipping), it's more performant to embed it all into the HTML document.
 
